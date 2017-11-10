@@ -1,0 +1,99 @@
+body {margin: 0;}
+
+#titel {
+    position: relative;
+    width: 100vw;
+    height: 56.25vw;
+    overflow: hidden;
+}
+#scene {
+    position: relative;
+    width: 100vw;
+    height: 56.25vw;
+    overflow: hidden;
+}
+#credit {position: relative;
+    width: 100vw;
+    height: 56.25vw;
+    overflow: hidden;}
+
+/*baggrunde*/
+#titelbaggrund {}
+#baggrund {}
+#creditbaggrund {}
+
+/*effekter til baggrund*/
+#elkabler {}
+#blade {}
+
+/*logo*/
+#logo {}
+
+/*knapper*/
+#start_knap {}
+#valg_uheldig {}
+#valg_noegen {}
+#start_spil {}
+
+/*brev*/
+#brev_container {}
+#brev_sprite {}
+
+/*vand*/
+#vand_container {}
+#vand_sprite {}
+
+/*p1*/
+#p1_container {}
+.p1_pos_start {}
+.p1_move_over {}
+.p1_pos_ved_p2 {}
+
+#p1_sprite {}
+.p1_start {}
+.p1_gaar {}
+.p1_tager_billede {}
+.p1_med_mobil {}
+
+/*p2*/
+#p2_container {}
+.p2_pos_start {}
+
+#p2_sprite {}
+.p2_start {}
+.p2_chok {}
+.p2_graeder {}
+
+/*p3_p6_p7*/
+#p3_p6_p7_container {}
+.p3_p6_p7_pos_start {}
+
+#p3_p6_p7_sprite {}
+.p3_p6_p7_start {}
+.p3_p6_p7_mobil_op {}
+.p3_p6_p7_chok {}
+.p3_p6_p7_griner {}
+
+/*p4*/
+#p4_container {}
+.p4_pos_start {}
+
+#p4_sprite {}
+.p4_start {}
+.p4_mobil_op {}
+.p4_chok {}
+.p4_griner {}
+
+/*p5*/
+#p5_container {}
+.p5_pos_start {}
+
+#p5_sprite {}
+.p5_start {}
+.p5_mobil_op {}
+.p5_chok {}
+.p5_griner {}
+
+/*lyd1*/
+/*lyd2*/
+/*lyd3*/
