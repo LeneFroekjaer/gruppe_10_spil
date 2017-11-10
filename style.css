@@ -1,99 +1,467 @@
-body {margin: 0;}
+body {
+    margin: 0;
+}
 
+/*
 #titel {
     position: relative;
     width: 100vw;
     height: 56.25vw;
     overflow: hidden;
 }
+*/
+
 #scene {
     position: relative;
     width: 100vw;
     height: 56.25vw;
     overflow: hidden;
 }
-#credit {position: relative;
+
+/*
+#credit {
+    position: relative;
     width: 100vw;
     height: 56.25vw;
-    overflow: hidden;}
+    overflow: hidden;
+}
+*/
 
 /*baggrunde*/
+
 #titelbaggrund {}
-#baggrund {}
+
+#baggrund {
+    background: url(img/baggrund.png);
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+
+
+}
+
 #creditbaggrund {}
 
 /*effekter til baggrund*/
+
 #elkabler {}
+
 #blade {}
 
 /*logo*/
+
 #logo {}
 
 /*knapper*/
+
 #start_knap {}
+
 #valg_uheldig {}
+
 #valg_noegen {}
+
 #start_spil {}
 
 /*brev*/
+
 #brev_container {}
+
 #brev_sprite {}
 
 /*vand*/
+
 #vand_container {}
+
 #vand_sprite {}
 
 /*p1*/
-#p1_container {}
+
+#p1_container {
+    position: absolute;
+    z-index: 10;
+    top: 26vw;
+    left: 10vw;
+}
+
 .p1_pos_start {}
+
 .p1_move_over {}
+
 .p1_pos_ved_p2 {}
 
-#p1_sprite {}
-.p1_start {}
-.p1_gaar {}
-.p1_tager_billede {}
-.p1_med_mobil {}
+#p1_sprite {
+    background-image: url(img/p1_sprite.svg);
+    width: 5vw;
+    height: 10vw;
+    background-size: 900%;
+}
+
+.p1_start {
+    animation-name: p1_start_kf;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(4);
+}
+
+@keyframes p1_start_kf {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: -400% 0;
+    }
+}
+
+
+.p1_gaar {
+    animation-name: p1_gaar_kf;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(8);
+}
+
+@keyframes p1_gaar_kf {
+    0% {
+        background-position: 0 -100%;
+    }
+    100% {
+        background-position: -800% -100%;
+    }
+}
+
+.p1_tager_billede {
+    animation-name: p1_tager_billede_kf;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(9);
+}
+
+@keyframes p1_tager_billede_kf {
+    0% {
+        background-position: 0 -200%;
+    }
+    100% {
+        background-position: -900% -200%;
+    }
+}
+
+.p1_med_mobil {
+    animation-name: p1_med_mobil_kf;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(2);
+}
+
+@keyframes p1_med_mobil_kf {
+    0% {
+        background-position: -700% -200%;
+    }
+    100% {
+        background-position: 800% -200%;
+    }
+}
 
 /*p2*/
-#p2_container {}
+
+#p2_container {
+    position: absolute;
+    z-index: 10;
+    top: 27vw;
+}
+
 .p2_pos_start {}
 
-#p2_sprite {}
-.p2_start {}
-.p2_chok {}
-.p2_graeder {}
+#p2_sprite {
+    background-image: url(img/p2_sprite.svg);
+    width: 4.4vw;
+    height: 8vw;
+    background-size: 400%;
+}
+
+.p2_start {
+
+    background-position: 0 0;
+}
+
+.p2_chok {
+    animation-name: p2_chok_kf;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(4);
+}
+
+@keyframes p2_chok_kf {
+    0% {
+        background-position: 0 -100%;
+    }
+    100% {
+        background-position: -400% -100%;
+    }
+}
+
+.p2_graeder {
+    animation-name: p2_graeder_kf;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(4);
+}
+
+@keyframes p2_graeder_kf {
+    0% {
+        background-position: 0 -200%;
+    }
+    100% {
+        background-position: -400% -200%;
+    }
+}
 
 /*p3_p6_p7*/
-#p3_p6_p7_container {}
+
+#p3_p6_p7_container {
+    position: absolute;
+    z-index: 10;
+    top: 38vw;
+    left: 11vw
+}
+
 .p3_p6_p7_pos_start {}
 
-#p3_p6_p7_sprite {}
-.p3_p6_p7_start {}
-.p3_p6_p7_mobil_op {}
-.p3_p6_p7_chok {}
-.p3_p6_p7_griner {}
+#p3_p6_p7_sprite {
+    background-image: url(img/p3_p6_p7_sprite.svg);
+    width: 15vw;
+    height: 10vw;
+    background-size: 300%;
+
+}
+
+.p3_p6_p7_start {
+    animation-name: p3_p6_p7_start_kf;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(3);
+}
+
+@keyframes p3_p6_p7_start_kf {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: -300% 0;
+    }
+}
+
+.p3_p6_p7_mobil_op {
+    animation-name: p3_p6_p7_mobil_op_kf;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(3);
+}
+
+@keyframes p3_p6_p7_mobil_op_kf {
+    0% {
+        background-position: 0 -100%;
+    }
+    100% {
+        background-position: -300% -100%;
+    }
+}
+
+.p3_p6_p7_chok {
+    animation-name: p3_p6_p7_chok_kf;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(2);
+}
+
+@keyframes p3_p6_p7_chok_kf {
+    0% {
+        background-position: 0 -300%;
+    }
+    100% {
+        background-position: -200% -300%;
+    }
+}
+
+.p3_p6_p7_griner {
+    animation-name: p3_p6_p7_griner_kf;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(2);
+}
+
+@keyframes p3_p6_p7_griner_kf {
+    0% {
+        background-position: 0 -200%;
+    }
+    100% {
+        background-position: -200% -200%;
+    }
+}
 
 /*p4*/
-#p4_container {}
+
+#p4_container {
+    position: absolute;
+    z-index: 10;
+    top: 25.2vw;
+    left: 42vw
+}
+
 .p4_pos_start {}
 
-#p4_sprite {}
-.p4_start {}
-.p4_mobil_op {}
-.p4_chok {}
-.p4_griner {}
+#p4_sprite {
+    background-image: url(img/p4_sprite.svg);
+    width: 4vw;
+    height: 9vw;
+    background-size: 400%;
+}
+
+.p4_start {
+    animation-name: p4_start_kf;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(3);
+}
+
+@keyframes p4_start_kf {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: -300% 0;
+    }
+}
+
+.p4_mobil_op {
+    animation-name: p4_mobil_op_kf;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(2);
+}
+
+@keyframes p4_mobil_op_kf {
+    0% {
+        background-position: 0 -100%;
+    }
+    100% {
+        background-position: -200% -100%;
+    }
+}
+
+.p4_chok {
+    animation-name: p4_chok_kf;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(4);
+}
+
+@keyframes p4_chok_kf {
+    0% {
+        background-position: 0 -300%;
+    }
+    100% {
+        background-position: -400% -300%;
+    }
+}
+
+.p4_griner {
+    animation-name: p4_griner_kf;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(2);
+}
+
+@keyframes p4_griner_kf {
+    0% {
+        background-position: 0 -200%;
+    }
+    100% {
+        background-position: -200% -200%;
+    }
+}
 
 /*p5*/
-#p5_container {}
+
+#p5_container {
+    position: absolute;
+    z-index: 10;
+    top: 37.7vw;
+    left: 38vw
+}
+
 .p5_pos_start {}
 
-#p5_sprite {}
-.p5_start {}
-.p5_mobil_op {}
-.p5_chok {}
-.p5_griner {}
+#p5_sprite {
+    background-image: url(img/p5_sprite.svg);
+    width: 5vw;
+    height: 10vw;
+    background-size: 500%;
+}
+
+.p5_start {
+    animation-name: p5_start_kf;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(2);
+}
+
+@keyframes p5_start_kf {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+.p5_mobil_op {
+    animation-name: p5_mobil_op_kf;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(5);
+}
+
+@keyframes p5_mobil_op_kf {
+    0% {
+        background-position: 0 -100%;
+    }
+    100% {
+        background-position: -500% -100%;
+    }}
+
+.p5_chok {
+    animation-name: p5_chok_kf;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(3);
+}
+
+@keyframes p5_chok_kf {
+    0% {
+        background-position: 0 -300%;
+    }
+    100% {
+        background-position: -300% -300%;
+    }}
+
+.p5_griner {
+    animation-name: p5_griner_kf;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(3);
+}
+
+@keyframes p5_griner_kf {
+    0% {
+        background-position: 0 -200%;
+    }
+    100% {
+        background-position: -300% -200%;
+    }}
 
 /*lyd1*/
+
 /*lyd2*/
+
 /*lyd3*/
