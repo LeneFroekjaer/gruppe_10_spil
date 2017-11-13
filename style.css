@@ -45,9 +45,152 @@ body {
 
 /*effekter til baggrund*/
 
-#elkabler {}
+#elkabler1 {
+    position: absolute;
+    z-index: 10;
+    background-image: url(img/el1.svg);
+    width: 3vw;
+    height: 3vw;
+    background-size: 100%;
+    animation-name: elkabler1_kf;
+    animation-duration: 0.8s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+    animation-timing-function: linear;
+}
 
-#blade {}
+@keyframes elkabler1_kf {
+    0% {
+        top: 14vw;
+        left: 70vw;
+    }
+    20% {
+        top: 16vw;
+        left: 50vw;
+    }
+    40% {
+        top: 8vw;
+        left: 30vw;
+    }
+    60% {
+        top: 1vw;
+        left: 22vw;
+        transform: scale(1);
+    }
+    80% {
+        top: 7vw;
+        left: 6vw;
+        transform: scale(0.5);
+    }
+    100% {
+        top: 2.5vw;
+        left: -5vw;
+        transform: scale(0.5);
+    }
+
+}
+
+#elkabler2 {
+    position: absolute;
+    z-index: 10;
+    background-image: url(img/el1.svg);
+    width: 3vw;
+    height: 3vw;
+    background-size: 100%;
+    animation-name: elkabler2_kf;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+    animation-timing-function: linear;
+}
+
+@keyframes elkabler2_kf {
+    0% {
+        top: 15vw;
+        left: 81vw;
+    }
+    50% {
+        top: 28vw;
+        left: 90vw;
+    }
+    100% {
+        top: 35vw;
+        left: 100vw;
+    }
+
+}
+
+#elkabler3 {
+    position: absolute;
+    z-index: 10;
+    background-image: url(img/el1.svg);
+    width: 2vw;
+    height: 2vw;
+    background-size: 100%;
+    animation-name: elkabler3_kf;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+    animation-timing-function: linear;
+}
+
+@keyframes elkabler3_kf {
+    0% {
+        top: 15vw;
+        left: 81vw;
+        transform: scale(1)
+    }
+
+    50% {
+        top: 10vw;
+        left: 76vw;
+        transform: scale(1)
+    }
+    80% {
+        top: 0vw;
+        left: 72.5vw;
+        transform: scale(1)
+    }
+    100% {
+        top: 4vw;
+        left: 79vw;
+        transform: scale(0.5);
+    }
+}
+
+#elkabler4 {
+    position: absolute;
+    z-index: 10;
+    background-image: url(img/el1.svg);
+    width: 1vw;
+    height: 1vw;
+    background-size: 100%;
+    animation-name: elkabler4_kf;
+    animation-duration: 0.4s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+    animation-timing-function: linear;
+}
+
+@keyframes elkabler4_kf {
+    0% {
+        top: 1vw;
+        left: 68vw;
+    }
+
+    40% {
+        top: 7vw;
+        left: 61vw;
+    }
+    70% {
+        top: 10.5vw;
+        left: 53vw;
+    }
+    100% {
+        top: 11.2vw;
+        left: 44vw;
+    }
+}
 
 /*logo*/
 
@@ -80,21 +223,44 @@ body {
 #p1_container {
     position: absolute;
     z-index: 10;
-    top: 26vw;
-    left: 10vw;
+    transform: scaleX(-1);
 }
 
-.p1_pos_start {}
+.p1_pos_start {
+    top: 26.5vw;
+    left: 20vw;
+}
 
-.p1_move_over {}
+.p1_move_over {
+    animation-name: p1_move_over_kf;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+    animation-timing-function: linear;
+}
 
-.p1_pos_ved_p2 {}
+@keyframes p1_move_over_kf {
+    0% {
+        top: 26.5vw;
+        left: 20vw;
+    }
+    100% {
+        top: 26.5vw;
+        left: 8vw;
+    }
+}
+
+.p1_pos_ved_p2 {
+    top: 26.5vw;
+    left: 8vw;
+}
 
 #p1_sprite {
-    background-image: url(img/p1_sprite.svg);
+    background-image: url(img/p1.svg);
     width: 5vw;
     height: 10vw;
     background-size: 900%;
+
 }
 
 .p1_start {
@@ -133,7 +299,7 @@ body {
 .p1_tager_billede {
     animation-name: p1_tager_billede_kf;
     animation-duration: 2s;
-    animation-iteration-count: infinite;
+    animation-iteration-count: 1;
     animation-timing-function: steps(9);
 }
 
@@ -167,20 +333,17 @@ body {
 #p2_container {
     position: absolute;
     z-index: 10;
-    top: 27vw;
+    top: 27.4vw;
 }
 
-.p2_pos_start {}
-
 #p2_sprite {
-    background-image: url(img/p2_sprite.svg);
-    width: 4.4vw;
-    height: 8vw;
+    background-image: url(img/p2.svg);
+    width: 4.5vw;
+    height: 9vw;
     background-size: 400%;
 }
 
 .p2_start {
-
     background-position: 0 0;
 }
 
@@ -202,14 +365,14 @@ body {
 
 .p2_graeder {
     animation-name: p2_graeder_kf;
-    animation-duration: 2s;
+    animation-duration: 1s;
     animation-iteration-count: infinite;
-    animation-timing-function: steps(4);
+    animation-timing-function: steps(2);
 }
 
 @keyframes p2_graeder_kf {
     0% {
-        background-position: 0 -200%;
+        background-position: -200% -200%;
     }
     100% {
         background-position: -400% -200%;
@@ -224,8 +387,6 @@ body {
     top: 38vw;
     left: 11vw
 }
-
-.p3_p6_p7_pos_start {}
 
 #p3_p6_p7_sprite {
     background-image: url(img/p3_p6_p7_sprite.svg);
@@ -253,8 +414,8 @@ body {
 
 .p3_p6_p7_mobil_op {
     animation-name: p3_p6_p7_mobil_op_kf;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
     animation-timing-function: steps(3);
 }
 
@@ -308,12 +469,10 @@ body {
     left: 42vw
 }
 
-.p4_pos_start {}
-
 #p4_sprite {
-    background-image: url(img/p4_sprite.svg);
+    background-image: url(img/p4_sprite-21.svg);
     width: 4vw;
-    height: 9vw;
+    height: 8vw;
     background-size: 400%;
 }
 
@@ -335,8 +494,8 @@ body {
 
 .p4_mobil_op {
     animation-name: p4_mobil_op_kf;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
     animation-timing-function: steps(2);
 }
 
@@ -386,11 +545,9 @@ body {
 #p5_container {
     position: absolute;
     z-index: 10;
-    top: 37.7vw;
-    left: 38vw
+    top: 38vw;
+    left: 39.3vw
 }
-
-.p5_pos_start {}
 
 #p5_sprite {
     background-image: url(img/p5_sprite.svg);
@@ -418,7 +575,7 @@ body {
 .p5_mobil_op {
     animation-name: p5_mobil_op_kf;
     animation-duration: 2s;
-    animation-iteration-count: infinite;
+    animation-iteration-count: 1;
     animation-timing-function: steps(5);
 }
 
@@ -428,7 +585,8 @@ body {
     }
     100% {
         background-position: -500% -100%;
-    }}
+    }
+}
 
 .p5_chok {
     animation-name: p5_chok_kf;
@@ -443,7 +601,8 @@ body {
     }
     100% {
         background-position: -300% -300%;
-    }}
+    }
+}
 
 .p5_griner {
     animation-name: p5_griner_kf;
@@ -458,10 +617,12 @@ body {
     }
     100% {
         background-position: -300% -200%;
-    }}
+    }
+}
 
-/*lyd1*/
+/*lyd_baggrund*/
 
-/*lyd2*/
+/*lyd_blizz*/
 
-/*lyd3*/
+/*lyd_ked*/
+/*lyd_griner*/
